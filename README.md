@@ -1,2 +1,2 @@
 # ChatMouse
- Aplicacion de mensajes en Android para el primer proyecto del curso de Progra III
+Implementada la creación de usuarios
