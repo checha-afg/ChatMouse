@@ -6,12 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".InicioActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="INGRESADO CON EXITO"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textAlignment="center"/>
+    <include
+        android:id="@+id/app_main_toolbar"
+        layout="@layout/toolbar_principal"/>
 
 </RelativeLayout>

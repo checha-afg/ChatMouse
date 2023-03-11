@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "453007891275",
-    "project_id": "chatmouse-4992d",
-    "storage_bucket": "chatmouse-4992d.appspot.com"
+    "project_number": "91104273699",
+    "project_id": "chatmouse-a542b",
+    "storage_bucket": "chatmouse-a542b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:453007891275:android:a3937289d2be7270c166ce",
+        "mobilesdk_app_id": "1:91104273699:android:9c596732ed2ec8371d5896",
         "android_client_info": {
-          "package_name": "chat.mouse"
+          "package_name": "com.chatmouse.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "453007891275-gqrgm3al9lq91acu7u76rr9t0it8ko6h.apps.googleusercontent.com",
+          "client_id": "91104273699-0v9a478ht6er16b4vtiutovarf2p6nn2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDS8Nb4CiZ0pCXG4pIobafBEmFehKusajk"
+          "current_key": "AIzaSyAca8GdAyzwnBT8UD7-kvWYcPFz0DsHhDg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "453007891275-gqrgm3al9lq91acu7u76rr9t0it8ko6h.apps.googleusercontent.com",
+              "client_id": "91104273699-0v9a478ht6er16b4vtiutovarf2p6nn2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

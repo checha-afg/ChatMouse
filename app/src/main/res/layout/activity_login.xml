@@ -24,21 +24,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:src="@drawable/mouse"/>
-
+    
     <EditText
         android:id="@+id/numero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_below="@+id/imagenlogin"
+        android:layout_below="@id/imagenlogin"
         android:layout_marginTop="30dp"
-        android:hint="Ingresa tu numero"
+        android:hint="Ingresar Número"
         android:padding="10dp"
         android:background="@drawable/textos"
         android:inputType="phone"/>
-
+    
     <Button
         android:id="@+id/enviar_numero"
         android:layout_width="match_parent"
@@ -46,11 +48,14 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_below="@+id/numero"
+        android:layout_below="@id/numero"
         android:layout_marginTop="20dp"
-        android:text="Enviar número"
+        android:text="Enviar"
+        android:textColor="@color/white"
         android:background="@drawable/botones"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
+
+    <!--parte de envio de codigo sms-->
 
     <EditText
         android:id="@+id/codigo"
@@ -59,7 +64,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_below="@+id/imagenlogin"
+        android:layout_below="@id/enviar_numero"
+        android:layout_marginTop="30dp"
         android:hint="Ingresar Codigo"
         android:padding="10dp"
         android:background="@drawable/textos"
@@ -73,13 +79,13 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_below="@+id/codigo"
+        android:layout_below="@id/codigo"
         android:layout_marginTop="20dp"
-        android:text="Enviar codigo"
+        android:text="Enviar Codigo"
+        android:textColor="@color/white"
         android:background="@drawable/botones"
         android:visibility="gone"
-        android:textSize="18dp"/>
-
+        android:textSize="18sp"/>
 
 
 </RelativeLayout>

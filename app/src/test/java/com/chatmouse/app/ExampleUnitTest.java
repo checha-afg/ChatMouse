@@ -1,4 +1,4 @@
-package chat.mouse;
+package com.chatmouse.app;
 
 import org.junit.Test;
 
