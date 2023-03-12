@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ChatMouse</string>
+    <string name="hola_otra_vez">Hola otra vez!</string>
+    <string name="inicia_sesion_para_continuar">Inicia Sesion para Continuar</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="crear_una_nueva_cuenta">Crear una nueva cuenta</string>
+    <string name="agregar_imagen">Agregar Imagen</string>
+    <string name="nombre">Nombre</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+    <string name="registrarse">Registrarse</string>
 </resources>
