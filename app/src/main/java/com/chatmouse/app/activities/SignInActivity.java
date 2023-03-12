@@ -1,11 +1,10 @@
 package com.chatmouse.app.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.chatmouse.app.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.chatmouse.app.databinding.ActivitySignInBinding;
 
 public class SignInActivity extends AppCompatActivity {
@@ -24,4 +23,20 @@ public class SignInActivity extends AppCompatActivity {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
     }
+
+    /*private void addDataToFirestore() {
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("nombre", "Lionel");
+        data.put("apellido","Messi");                    ESTE CODIGO FUE SOLO PARA
+        database.collection("usuarios");             PROBAR LA FIRESTORE, NO LO DESCOMENTEN
+                .add(data)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(getApplicationContext(), "Datos insertados", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(exception -> {
+                    Toast.makeText(getApplicationContext(),exception.getMessage(),Toast.LENGTH_SHORT).show();
+                });
+    }*/
+
 }

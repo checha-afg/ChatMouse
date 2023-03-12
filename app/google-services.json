@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "406719250429",
+    "project_id": "chatmouse-d789c",
+    "storage_bucket": "chatmouse-d789c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406719250429:android:ac4a6df7f6d01092ed2394",
+        "android_client_info": {
+          "package_name": "com.chatmouse.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406719250429-7vfq05hibrs2k2pmq7efc5e3sitpceu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1NCYZRKUxtPPVROGrFDrdVgEu971RW5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406719250429-7vfq05hibrs2k2pmq7efc5e3sitpceu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
