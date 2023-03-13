@@ -2,10 +2,14 @@ package com.chatmouse.app.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.chatmouse.app.databinding.ActivitySignInBinding;
+
+import java.util.regex.Pattern;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -22,6 +26,11 @@ public class SignInActivity extends AppCompatActivity {
     private void  setListeners() {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class)));
+        binding.ButtonSignIn.setOnClickListener(v -> {
+            if(isValidSignInDetails()) {
+                signIn();
+            }
+        });
     }
 
     /*private void addDataToFirestore() {
@@ -38,5 +47,25 @@ public class SignInActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),exception.getMessage(),Toast.LENGTH_SHORT).show();
                 });
     }*/
+    private  void signIn() {
 
+    }
+
+    private void showToast(String message){
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+    private boolean isValidSignInDetails(){
+        if(binding.inputEmail.getText().toString().trim().isEmpty()) {
+            showToast("Ingresa el Correo");
+            return false;
+        }else if (!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()) {
+            showToast("Ingresa un Correo Valido");
+            return false;
+        }else if (binding.inputPassword.getText().toString().trim().isEmpty()) {
+            showToast("Ingresa la Contraseña!");
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
