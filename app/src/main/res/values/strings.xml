@@ -13,4 +13,5 @@
     <string name="confirmar_contrase_a">Confirmar Contraseña</string>
     <string name="registrarse">Registrarse</string>
     <string name="select_user">Select User</string>
+    <string name="type_a_message">Type a Message</string>
 </resources>
