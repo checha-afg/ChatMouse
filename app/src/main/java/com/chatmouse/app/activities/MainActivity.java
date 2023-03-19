@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 );
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
                 //.addOnSuccessListener(unused -> showToast("token updated succesfuly"))
-                .addOnFailureListener(e -> showToast("unable to update token"));
+                .addOnFailureListener(e -> showToast("No se puede actualizar el Token :("));
     }
     private void signOut(){
         showToast("Signing out....");
