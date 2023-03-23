@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!---    <uses-permission android:name="android.permission.GPS" /> -->
 
     <application
         android:allowBackup="true"
@@ -14,10 +15,10 @@
         android:theme="@style/Theme.ChatMouse"
         tools:targetApi="31">
         <activity
-            android:name=".ChatActivity"
-            android:exported="false" />
+            android:name=".activities.ChatActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name=".UsersActivity"
+            android:name=".activities.UsersActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SignUpActivity"
