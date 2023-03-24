@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.chatmouse.app.adapters.ChatAdapter;
 import com.chatmouse.app.databinding.ActivityChatBinding;
 import com.chatmouse.app.models.ChatMessage;
@@ -32,7 +34,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-public class ChatActivity extends BaseActivity {
+public class ChatActivity extends AppCompatActivity {
 
     private ActivityChatBinding binding;
     private User receiverUser;
@@ -53,6 +55,7 @@ public class ChatActivity extends BaseActivity {
         init();
         listenMessages();
     }
+
     private void init() {
         preferenceManager = new PreferenceManager(getApplicationContext());
         chatMessages = new ArrayList<>();
@@ -123,7 +126,7 @@ public class ChatActivity extends BaseActivity {
     }
     private final EventListener<QuerySnapshot> eventListener = (value, error) -> {
         if (error != null){
-
+            return;
         }
         if (value != null){
             int count = chatMessages.size();
@@ -135,6 +138,7 @@ public class ChatActivity extends BaseActivity {
                     chatMessage.message = documentChange.getDocument().getString(Constants.KEY_MESSAGE);
                     chatMessage.dateTime = getReadableDateTime(documentChange.getDocument().getDate(Constants.KEY_TIMESTAMP));
                     chatMessage.dateObject = documentChange.getDocument().getDate(Constants.KEY_TIMESTAMP);
+                    chatMessages.add(chatMessage);
                 }
             }
             Collections.sort(chatMessages, (obj1, obj2) -> obj1.dateObject.compareTo(obj2.dateObject));
@@ -146,12 +150,13 @@ public class ChatActivity extends BaseActivity {
             }
             binding.chatRecyclerView.setVisibility(View.VISIBLE);
         }
-        binding.chatRecyclerView.setVisibility(View.GONE);
+        binding.progressBar.setVisibility(View.GONE);
         if (conversionId == null){
             checkForConversion();
         }
     };
-    private Bitmap getBitmapFromEncodedString(String encodedImage){
+
+    private Bitmap  getBitmapFromEncodedString(String encodedImage){
         byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
@@ -159,7 +164,6 @@ public class ChatActivity extends BaseActivity {
     private void  loadReceiverDetails(){
         receiverUser =  (User) getIntent().getSerializableExtra(Constants.KEY_USER);
         binding.textName.setText(receiverUser.name);
-
     }
 
     private void setListeners(){
@@ -188,6 +192,10 @@ public class ChatActivity extends BaseActivity {
             checkForConversionRemotely(
                     preferenceManager.getString(Constants.KEY_USER_ID),
                     receiverUser.id
+            );
+            checkForConversionRemotely(
+                    receiverUser.id,
+                    preferenceManager.getString(Constants.KEY_USER_ID)
             );
         }
     }

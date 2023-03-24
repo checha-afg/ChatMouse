@@ -3,6 +3,9 @@ package com.chatmouse.app.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.chatmouse.app.adapters.UsersAdapter;
 import com.chatmouse.app.databinding.ActivityUsersBinding;
 import com.chatmouse.app.listeners.UserListener;
@@ -15,7 +18,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersActivity extends BaseActivity implements UserListener {
+public class UsersActivity extends AppCompatActivity implements UserListener {
 
     private ActivityUsersBinding binding;
     private PreferenceManager preferenceManager;
@@ -45,8 +48,8 @@ public class UsersActivity extends BaseActivity implements UserListener {
                     String currentUserId = preferenceManager.getString(Constants.KEY_USER_ID);
                     if(task.isSuccessful() && task.getResult() !=null){
                         List<User> users = new ArrayList<>();
-                        for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()){
-                            if(currentUserId.equals(queryDocumentSnapshot.getId())){
+                        for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
+                            if(currentUserId.equals(queryDocumentSnapshot.getId())) {
                                 continue;
                             }
                             User user = new User();
