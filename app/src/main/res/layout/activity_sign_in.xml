@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_40sdp"
             android:text="@string/hola_otra_vez"
-            android:textColor="@color/primary_text"
+            android:textColor="#ACB5B7"
             android:textSize="@dimen/_18ssp"
             android:textStyle="bold"/>
 
